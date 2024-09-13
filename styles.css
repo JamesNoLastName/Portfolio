@@ -378,7 +378,7 @@ section {
 
 /* Style for the Projects section */
 #Projects {
-    background: url('city.gif') no-repeat center center fixed; /* Set GIF background */
+    background: url('Media/city.gif') no-repeat center center fixed; /* Set GIF background */
     background-size: cover; /* Ensure the background covers the entire section */
     padding: 0; /* Remove padding around the section */
     margin-top: 180px; /* Offset from the fixed header */
@@ -561,7 +561,7 @@ section {
 }
 
 #Resume {
-    background: url('specks.gif') no-repeat center center fixed; /* Set GIF background */
+    background: url('Media/specks.gif') no-repeat center center fixed; /* Set GIF background */
     background-size: cover; /* Ensure the background covers the entire section */
     padding: 0; /* Remove padding around the section */
     margin-top: 180px; /* Offset from the fixed header */
@@ -700,7 +700,7 @@ section {
 .buy-me-a-coffee::after {
     content: 'Buy Me a Coffee 🙏'; /* Tooltip text */
     position: absolute;
-    bottom: 40%; /* Position tooltip above the image */
+    bottom: 40%; /* Position tooltip above the image with margin-like spacing */
     left: 50%; /* Center horizontally relative to the image */
     transform: translateX(-50%); /* Center the tooltip horizontally */
     background-color: rgba(0, 0, 0, 0.8); /* Dark background */
