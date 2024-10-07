@@ -562,7 +562,7 @@ section {
 }
 
 #Resume {
-    background: url('Media/specks.gif') no-repeat center center fixed; /* Set GIF background */
+    background: url('Media/pulse.gif') no-repeat center center fixed; /* Set GIF background */
     background-size: cover; /* Ensure the background covers the entire section */
     padding: 0; /* Remove padding around the section */
     margin-top: 180px; /* Offset from the fixed header */
@@ -629,38 +629,63 @@ section {
     box-shadow: none; /* No shadow */
     text-align: center; /* Center-align the text */
 }
-
-/* Apply to the entire section to center the content vertically and horizontally */
 #Featured {
+    background: url('Media/blueprint.jpg') no-repeat center center fixed;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height for vertical centering */
-    text-align: center; /* Center text inside */
-    background-size: cover; /* Ensure the background image covers the section */
-    background-position: center; /* Center the background image */
-    transition: background-image 0.5s ease; /* Smooth transition for the background image */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease;
 }
 
 .Featured-content {
-    max-width: 90%; /* Increase max-width to fill more of the screen */
-    margin: 0 auto; /* Center the content horizontally */
-    padding: 0 50px; /* Add horizontal padding for better spacing */
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px 50px; /* Adjusted padding */
 }
 
 .Featured-content h2 {
-    font-size: 8rem; /* Larger font size for the heading */
-    margin-bottom: 1.5rem; /* Space below the heading */
-    font-weight: 700; /* Bold font weight */
+    font-size: 10rem; /* Increased size */
+    margin-bottom: 2rem; /* Increased space below */
+    font-weight: 700;
+    color: white; /* Contrast color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
 }
 
-.Featured-content p {
-    font-size: 2.5rem; /* Adjusted font size for better alignment */
-    line-height: 2.5; /* Increase line height for readability */
-    margin-bottom: 1.5rem; /* Space below paragraphs */
-    max-width: 100%; /* Ensure paragraph width fills container */
-    margin: 0 auto; /* Center paragraphs */
+.featured-list {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
 }
+
+.featured-list li {
+    position: relative; /* Position for custom bullet */
+    padding-left: 25px; /* Space for custom bullet */
+    margin-bottom: 1.5rem; /* Space between items */
+    font-size: 3rem; /* Increased size */
+    line-height: 1.5; /* Adjust line height for readability */
+    color: white; /* Contrast color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
+}
+
+@media (max-width: 768px) {
+    .Featured-content h2 {
+        font-size: 6rem; /* Responsive size */
+    }
+    
+    .featured-list li {
+        font-size: 2rem; /* Responsive size */
+    }
+}
+
+
 
 .other-content {
     display: flex; /* Use flexbox to align items */
