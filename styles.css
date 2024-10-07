@@ -430,7 +430,7 @@ section {
     color: #fff; /* Text color inside the rectangles */
     padding: 1rem; /* Padding inside the rectangles */
     border-radius: 0.5rem; /* Rounded corners */
-    border: 2px solid #b74b4b; /* Red border around the rectangles */
+    border: 8px solid hwb(53 8% 14%); /* Red border around the rectangles */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
     display: flex; /* Use flexbox to center content */
     align-items: center; /* Center content vertically */
@@ -467,7 +467,6 @@ section {
     color: #fff
 }
 
-/* Hide text by default */
 .project-item .project-text {
     position: absolute; /* Absolute positioning */
     top: 50%; /* Center vertically */
@@ -476,12 +475,14 @@ section {
     font-size: 1.5rem; /* Adjust font size as needed */
     color: #fff; /* White text color */
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); /* Optional text shadow for better readability */
-    padding: 0.5rem; /* Padding around the text */
+    padding: 0.5rem 1rem; /* Padding around the text, adjust as needed */
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     border-radius: 0.5rem; /* Rounded corners for the text background */
     z-index: 2; /* Ensure the text is on top of the blur effect */
     opacity: 0; /* Hide text by default */
     transition: opacity 0.3s ease; /* Smooth transition for text appearance */
+    display: inline-block; /* Change to inline-block to fit content */
+    max-width: 200px;
 }
 
 /* Show text on hover */
@@ -747,3 +748,4 @@ section {
     text-align: left; /* Center-justify the text if needed */
     margin-right: 80px;
 }
+
