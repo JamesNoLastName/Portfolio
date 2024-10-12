@@ -17,16 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hireMeButton && contactMessage && socialIcons.length) {
         hireMeButton.addEventListener('click', (event) => {
             event.preventDefault();
-
             contactMessage.textContent = 'Contact me!';
             contactMessage.style.display = 'inline'; 
-
             socialIcons.forEach(icon => icon.classList.add('highlight'));
-
             setTimeout(() => {
                 contactMessage.textContent = '';
                 contactMessage.style.display = 'none';
-
                 socialIcons.forEach(icon => icon.classList.remove('highlight'));
             }, 5000);
         });
