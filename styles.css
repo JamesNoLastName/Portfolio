@@ -1,199 +1,174 @@
-/* Importing the Poppins font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
-/* Applying general styles to all elements */
 * {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    text-decoration: none; /* Remove default underline from links */
-    border: none; /* Remove default borders */
-    outline: none; /* Remove default focus outline */
-    font-family: 'Poppins', sans-serif; /* Set default font to Poppins */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Setting the font size of the root element (html) */
 html {
-    font-size: 62.5%; /* Base font size (10px) for easier rem calculations */
+    font-size: 62.5%;
 }
 
-/* Styling the body element */
 body {
-    width: 100%; /* Full width of the viewport */
-    height: 100vh; /* Full height of the viewport */
-    overflow-x: hidden; /* Prevent horizontal scroll */
-    background-color: black; /* Set background color to black */
-    color: white; /* Set text color to white */
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
 }
 
-/* Styling the header */
 header {
-    margin-top: 20px; /* Space above the header */
-    position: fixed; /* Fix position at the top of the viewport */
-    top: 0; /* Align to the top of the viewport */
-    left: 0; /* Align to the left of the viewport */
-    width: 100%; /* Full width of the viewport */
-    padding: 1rem 9%; /* Padding inside the header */
-    background-color: transparent; /* Transparent background */
-    filter: drop-shadow(10px); /* Apply drop shadow effect */
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space out items evenly */
-    align-items: center; /* Center items vertically */
-    z-index: 100; /* Place header above other elements */
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
 
-/* Styling the logo */
 .logo {
-    font-size: 3rem; /* Large font size for the logo */
-    color: #7d12ff; /* Set color to a shade of red */
-    font-weight: 800; /* Extra bold font weight */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: 0.5s ease; /* Smooth transition for hover effect */
+    font-size: 3rem;
+    color: #7d12ff;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
 }
 
-/* Logo hover effect */
 .logo:hover {
-    transform: scale(1.1); /* Scale up the logo on hover */
+    transform: scale(1.1);
 }
 
-/* Styling navigation links */
 nav a {
-    font-size: 1.8rem; /* Font size for navigation links */
-    color: #7d12ff; /* Set text color to white */
-    margin-left: 4rem; /* Space between navigation links */
-    font-weight: 500; /* Medium font weight */
-    transition: 0.3s ease; /* Smooth transition for hover effect */
-    border-bottom: 3px solid transparent; /* Add bottom border (transparent by default) */
+    font-size: 1.8rem;
+    color: #7d12ff;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
 }
 
-/* Navigation link hover and active state */
 nav a:hover,
 nav a.active {
-    color: #b74b4b; /* Change text color on hover or when active */
-    border-bottom: 3px solid #b74b4b; /* Add bottom border in red */
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
 }
 
-/* Responsive styles for navigation menu on smaller screens */
 @media(max-width:995px) {
     nav {
-        position: absolute; /* Position navigation menu absolutely */
-        display: none; /* Hide navigation menu by default */
-        top: 0; /* Align to the top of the viewport */
-        right: 0; /* Align to the right of the viewport */
-        width: 40%; /* Set width to 40% of the viewport */
-        border-left: 3px solid #7d12ff; /* Add left border in red */
-        border-bottom: 3px solid #7d12ff; /* Add bottom border in red */
-        border-bottom-left-radius: 2rem; /* Rounded bottom-left corner */
-        padding: 1rem; /* Padding inside the navigation menu */
-        background-color: #161616; /* Dark background color */
-        border-top: 0.1rem solid rgba(0,0,0,0.1); /* Subtle top border */
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #7d12ff;
+        border-bottom: 3px solid #7d12ff;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
     }
 
-    /* Show the navigation menu when active */
     nav.active {
-        display: block; /* Display the menu */
+        display: block;
     }
 
-    /* Styling navigation links in the menu */
     nav a {
-        display: block; /* Make each link a block element */
-        font-size: 2rem; /* Larger font size for the menu links */
-        margin: 3rem 0; /* Space between menu links */
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
     }
 
-    /* Hover effect for navigation menu links */
     nav a:hover,
     nav a.active {
-        padding: 1rem; /* Add padding around the link */
-        border-radius: 0.5rem; /* Round corners of the link */
-        border-bottom: 0.5rem solid #7d12ff; /* Add thicker bottom border in red */
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #7d12ff;
     }
 }
 
-/* Styling sections */
 section {
-    min-height: 100vh; /* Ensure section takes up full viewport height */
-    padding: 5rem 9% 5rem; /* Padding inside sections */
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
 }
 
-/* Styling the home section */
 .home {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    gap: 8rem; /* Space between items */
-    background-color: black; /* Black background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
 }
 
-/* Styling the content within the home section */
 .home .home-content h1 {
-    font-size: 6rem; /* Large font size for heading */
-    font-weight: 700; /* Bold font weight */
-    line-height: 1.3; /* Line height for readability */
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
 }
 
-/* Styling the span element within the home content */
 span {
-    color: #7d12ff; /* Set text color to red */
+    color: #7d12ff;
 }
 
-/* Styling the subheading within the home content */
 .home-content h3 {
-    font-size: 4rem; /* Large font size for subheading */
-    margin-bottom: 1rem; /* Space below the subheading */
-    font-weight: 700; /* Bold font weight */
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
-/* Styling paragraphs within the home content */
 .home-content p {
-    font-size: 1.6rem; /* Font size for paragraphs */
+    font-size: 1.6rem;
 }
 
-/* Styling the home image container */
 .home-img {
-    width: 80vw; /* Adjust width as needed */
-    height: 40vw; /* Adjust height to maintain aspect ratio */
-    display: flex; /* Center content */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    overflow: hidden; /* Hide overflow */
-    position: relative; /* Position relative for absolute child */
+    width: 80vw;
+    height: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    cursor: pointer; /* Change cursor to pointer on hover */
-    animation: none; /* Default no spinning */
-    transition: transform 0.5s ease; /* Smooth transition for spinning */
+    cursor: pointer;
+    transition: transform 0.5s ease;
 }
 
-/* Wrapper for the image (no animation here) */
 .home-img-wrapper {
-    width: 100%; /* Full width of the parent container */
-    height: 100%; /* Full height of the parent container */
-    position: absolute; /* Position absolutely to cover the entire area */
-    top: 0; /* Align to the top of the parent container */
-    left: 0; /* Align to the left of the parent container */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-/* Styling the image container */
 .home-img-inner {
-    width: 100%; /* Make image container fill the wrapper */
-    height: 100%; /* Make image container fill the wrapper */
-    display: flex; /* Center content */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Styling the image */
 .home-img-inner img {
-    width: 100%; /* Make image fill container */
-    height: 100%; /* Make image fill container */
-    object-fit: cover; /* Maintain image aspect ratio */
-    border-radius: 50%; /* Ensure the image remains circular */
-    box-shadow: 0 0 25px solid #7d12ff; /* Default shadow around the image */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #7d12ff;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
 }
 
-/* Hover effect */
 .home-img:hover::after {
     content: "Click me!!";
     position: absolute;
@@ -207,10 +182,9 @@ span {
     font-size: 1.5rem;
     font-weight: bold;
     white-space: nowrap;
-    pointer-events: none; /* Ensure this message does not block clicks */
+    pointer-events: none;
 }
 
-/* Keyframes for spinning the star */
 @keyframes spin {
     from {
         transform: rotate(0deg);
@@ -220,62 +194,47 @@ span {
     }
 }
 
-/* Active state when spinning */
 .home-img.spinning {
-    animation: spin 3s linear infinite; /* Apply spinning animation */
+    animation: spin 3s linear infinite;
 }
 
-/* Styling social media icons */
 .social-icons a {
-    display: inline-flex; /* Use inline-flex for layout */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    width: 4rem; /* Width of the icon */
-    height: 4rem; /* Height of the icon */
-    background-color: transparent; /* Transparent background */
-    border: 0.2rem solid #7d12ff; /* Red border around the icon */
-    font-size: 2rem; /* Font size for the icon */
-    border-radius: 50%; /* Make the icon circular */
-    margin: 3rem 1.5rem 3rem 0; /* Space around the icon */
-    transition: 0.3s ease; /* Smooth transition for hover effect */
-    color: #7d12ff; /* Red color for the icon */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #7d12ff;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #7d12ff;
 }
 
-/* Hover effect for social media icons */
 .social-icons a:hover {
-    color: black; /* Change text color on hover */
-    transform: scale(1.3) translateY(-5px); /* Enlarge and lift the icon on hover */
-    background-color: #7d12ff; /* Change background color on hover */
-    box-shadow: 0 0 25px #7d12ff; /* Add red shadow on hover */
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #7d12ff;
+    box-shadow: 0 0 25px #7d12ff;
 }
 
-/* Styling buttons */
 .btn {
-    display: inline-block; /* Make the button an inline block element */
-    padding: 1rem 2.8rem; /* Padding inside the button */
-    background-color: black; /* Black background color */
-    border-radius: 4rem; /* Rounded corners */
-    font-size: 1.6rem; /* Font size for button text */
-    color: #7d12ff; /* Red color for button text */
-    letter-spacing: 0.3rem; /* Space between letters */
-    font-weight: 600; /* Semi-bold font weight */
-    border: 2px solid #7d12ff; /* Red border around the button */
-    transition: 0.3s ease; /* Smooth transition for hover effect */
-    cursor: pointer; /* Change cursor to pointer on hover */
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #7d12ff;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #7d12ff;
+    transition: 0.3s ease;
+    cursor: pointer;
 }
 
-/* Button hover effect */
 .btn:hover {
-    transform: scale3d(1.03);
-}
-
-nav a:hover,
-nav a.active {
-    color: #7d12ff; /* Change text color on hover or when active */
-    border-bottom: 3px solid #7d12ff; /* Add bottom border in red */
-}
-
-.btn:hover{
     transform: scale3d(1.03);
     background-color: #7d12ff;
     color: black;
@@ -288,22 +247,22 @@ nav a.active {
     white-space: nowrap;
     overflow: hidden;
     padding: 0 0.5rem;
-    display: inline-block; /* Ensure the cursor effect is visible */
-    position: relative; /* For layering above the overlay */
-    color: #fff; /* Text color */
+    display: inline-block;
+    position: relative;
+    color: #fff;
 }
 
 .typing-text span {
     display: inline;
-    position: relative; /* Positioning context for the cursor */
+    position: relative;
 }
 
 .typing-text span::after {
     content: '';
     display: inline-block;
     width: 3px;
-    height: 1em; /* Match the text height */
-    background: #7d12ff; /* Cursor color */
+    height: 1em;
+    background: #7d12ff;
     animation: cursor-blink 0.7s step-end infinite;
 }
 
@@ -312,327 +271,257 @@ nav a.active {
         background: transparent;
     }
     50% {
-        background: #7d12ff; /* Cursor color */
+        background: #7d12ff;
     }
 }
 
+#About-me, #Resume, #Featured, #Other {
+    background-color: rgb(247, 16, 16);
+}
 
-
-/* Header styling */
 header {
-    background-color: #000; /* Black background for the header */
-    padding: 1rem; /* Padding inside the header */
-    position: fixed; /* Fixed positioning to stay at the top */
-    width: 100%; /* Full width of the viewport */
-    top: 0; /* Align to the top of the viewport */
-    left: 0; /* Align to the left of the viewport */
-    color: #fff; /* White text color */
-    z-index: 1000; /* Ensure header is above other content */
-    margin: 0; /* Ensure no margin around the header */
-    border-bottom: 2px solid #444444; /* Optional: Add a bottom border for distinction */
+    background-color: #000;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    color: #fff;
+    z-index: 1000;
+    margin: 0;
+    border-bottom: 2px solid #444444;
 }
 
-/* Navigation styling */
 nav {
-    background-color: #111; /* Dark background color for the navigation area */
-    padding: 0.5rem 0; /* Adjust padding as needed */
+    background-color: #111;
+    padding: 0.5rem 0;
 }
 
-/* Navigation links styling */
 nav a {
-    color: #fff; /* White text color for navigation links */
+    color: #fff;
     text-decoration: none;
-    border-bottom: 3px solid transparent; /* Transparent underline by default */
-    margin-right: 1rem; /* Space between links */
+    border-bottom: 3px solid transparent;
+    margin-right: 1rem;
     padding: 0.5rem;
-    font-size: 1.8rem; /* Adjust font size if needed */
-    transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition for color and underline changes */
+    font-size: 1.8rem;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 nav a:hover,
 nav a.active {
-    color: #7d12ff; /* Color of the link text when hovered or active */
-    border-bottom: 3px solid #7d12ff; /* Underline color on hover or active */
+    color: #7d12ff;
+    border-bottom: 3px solid #7d12ff;
 }
 
-/* General body styling */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: rgb(0, 0, 0); /* Set body background to black IMPORTANT */
-    color: #fff; /* Default text color */
+    background-color: rgb(0, 0, 0);
+    color: #fff;
 }
 
-/* Styling sections */
 section {
     padding: 2rem;
-    background-color: rgb(0, 0, 0); /* Ensure section background is black */
-    color: #fff; /* Text color for sections */
-    margin: 0; /* Ensure no margin around sections */
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    margin: 0;
 }
 
 #About-me, #Resume, #Featured, #Other {
-    background-color: rgb(247, 16, 16); /* Ensure background is black */
+    background-color: rgb(247, 16, 16);
 }
 
-
-/* Style for the Projects section */
 #Projects {
-    background: url('Media/city.gif') no-repeat center center fixed; /* Set GIF background */
-    background-size: cover; /* Ensure the background covers the entire section */
-    padding: 0; /* Remove padding around the section */
-    margin-top: 180px; /* Offset from the fixed header */
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    height: calc(100vh - 180px); /* Adjust height to fill the viewport minus the offset */
-    overflow: hidden; /* Hide any overflow content */
-    position: relative; /* Relative positioning for label */
+    background: url('Media/city.gif') no-repeat center center fixed;
+    background-size: cover;
+    padding: 0;
+    margin-top: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 180px);
+    overflow: hidden;
+    position: relative;
 }
 
 .projects-label {
-    position: absolute; /* Absolute positioning for overlay effect */
-    top: -10px; /* Position at the top of the section */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Centering using transform */
-    font-size: 5rem; /* Increase font size */
-    font-weight: bold; /* Make text bold */
-    color: #fff; /* White text color */
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5rem;
+    font-weight: bold;
+    color: #fff;
     text-shadow: 
-        1px 1px 0 #000, /* Bottom-right shadow */
-       -1px 1px 0 #000, /* Bottom-left shadow */
-        1px -1px 0 #000, /* Top-right shadow */
-       -1px -1px 0 #000; /* Top-left shadow */
-    z-index: 3; /* Ensure label is on top of the blur effect but covered by header */
+        1px 1px 0 #000,
+       -1px 1px 0 #000,
+        1px -1px 0 #000,
+       -1px -1px 0 #000;
+    z-index: 3;
 }
 
-
-/* Container for the project items */
 .projects-container {
-    display: grid; /* Use CSS Grid for layout */
-    grid-template-columns: repeat(3, minmax(200px, 1fr)); /* 3 columns with adjustable width */
-    grid-template-rows: repeat(2, minmax(200px, 1fr)); /* 2 rows with adjustable height */
-    column-gap: 15rem; /* Increase space between columns */
-    row-gap: 2rem; /* Space between rows (unchanged) */
-    width: 90%; /* Full width of the container with some space around */
-    height: 80%; /* Full height of the container with some space around */
-    max-width: 1200px; /* Max width to ensure responsiveness */
-    max-height: 800px; /* Max height to ensure responsiveness */
-    margin-top: 80px; /* Ensure the container starts below the offset */
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, minmax(200px, 1fr));
+    column-gap: 15rem;
+    row-gap: 2rem;
+    width: 90%;
+    height: 80%;
+    max-width: 1200px;
+    max-height: 800px;
+    margin-top: 80px;
     margin-right: 60px;
-    position: relative; /* Relative positioning for any additional positioning needs */
+    position: relative;
 }
 
-/* Style for each project item */
 .project-item {
-    position: relative; /* Position relative for pseudo-element positioning */
-    background-color: #444444; /* Background color of the rectangles */
-    color: #fff; /* Text color inside the rectangles */
-    padding: 1rem; /* Padding inside the rectangles */
-    border-radius: 0.5rem; /* Rounded corners */
-    border: 8px solid hwb(53 8% 14%); /* Red border around the rectangles */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    display: flex; /* Use flexbox to center content */
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-    overflow: hidden; /* Ensure content doesn't overflow */
-    width: 120%; /* Fill the grid cell width */
-    height: 90%; /* Fill the grid cell height */
+    position: relative;
+    background-color: #444444;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 8px solid hwb(53 8% 14%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 120%;
+    height: 90%;
 }
 
-/* Style for images inside project items */
 .project-item img {
-    position: absolute; /* Absolute positioning to cover the entire item */
-    top: 0; /* Align to the top of the container */
-    left: 0; /* Align to the left of the container */
-    width: 100%; /* Full width of the container */
-    height: 100%; /* Full height of the container */
-    object-fit: cover; /* Ensure the image covers the rectangle */
-    z-index: 1; /* Ensure the image is beneath the text */
-    transition: filter 0.3s ease; /* Smooth transition for the blur effect */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: filter 0.3s ease;
 }
 
-/* Apply blur effect on hover */
 .project-item:hover img {
-    filter: blur(4px); /* Apply blur effect on hover */
-}
-
-/* Hide text by default */
-.project-item .project-text {
-    position: absolute; /* Absolute positioning */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Centering using transform */
-    font-size: 1.5rem; /* Adjust font size as needed */
-    color: #fff
+    filter: blur(4px);
 }
 
 .project-item .project-text {
-    position: absolute; /* Absolute positioning */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Centering using transform */
-    font-size: 1.5rem; /* Adjust font size as needed */
-    color: #fff; /* White text color */
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); /* Optional text shadow for better readability */
-    padding: 0.5rem 1rem; /* Padding around the text, adjust as needed */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    border-radius: 0.5rem; /* Rounded corners for the text background */
-    z-index: 2; /* Ensure the text is on top of the blur effect */
-    opacity: 0; /* Hide text by default */
-    transition: opacity 0.3s ease; /* Smooth transition for text appearance */
-    display: inline-block; /* Change to inline-block to fit content */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: inline-block;
     max-width: 200px;
 }
 
-/* Show text on hover */
 .project-item:hover .project-text {
-    opacity: 1; /* Show text on hover */
+    opacity: 1;
 }
 
-/* Apply to the entire section if you want to center the content vertically and horizontally */
 #about-me {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height for vertical centering */
-    text-align: center; /* Center text inside */
-    background-size: cover; /* Ensure the background image covers the section */
-    background-position: center; /* Center the background image */
-    transition: background-image 0.5s ease; /* Smooth transition for the background image */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease;
 }
 
 .about-me-content {
-    max-width: 90%; /* Increase max-width to fill more of the screen */
-    margin: 0 auto; /* Center the content horizontally */
-    padding: 0 50px; /* Add horizontal padding for better spacing */
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 50px;
 }
 
 .about-me-content h2 {
-    font-size: 8rem; /* Larger font size for the heading */
-    margin-bottom: 1.5rem; /* Space below the heading */
-    font-weight: 700; /* Bold font weight */
+    font-size: 8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
 }
 
 .about-me-content p {
-    font-size: 2.5rem; /* Adjusted font size for better alignment */
-    line-height: 2.5; /* Increase line height for readability */
-    margin-bottom: 1.5rem; /* Space below paragraphs */
-    max-width: 100%; /* Ensure paragraph width fills container */
-    margin: 0 auto; /* Center paragraphs */
-}
-
-/* Optional: Style for content within the section */
-#about-me .about-me-content {
-    padding: 20px; /* Optional: add some padding */
-}
-
-.fade-image {
-    background-image: none !important; /* Ensure the background image is removed properly */
-}
-
-.highlight-wrapper {
-    display: inline-block; /* Ensure the wrapper behaves like an inline element */
-    padding: 0.1.25rem; /* Increase the hover area */
-}
-
-.highlight {
-    position: relative;
-    z-index: 1; /* Ensure text is above the wrapper */
-}
-
-.highlight {
-    position: relative;
-    display: inline-block;
-    color: #007bff; /* Default text color, adjust as needed */
-    text-decoration: underline; /* Optional: underline text for a link-like effect */
-    cursor: pointer; /* Change cursor to pointer to indicate it's interactive */
-    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for color and shadow */
-}
-
-.highlight:hover {
-    color: #7d12ff; /* Color when hovered */
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Optional: add a shadow effect on hover */
-}
-
-/* Optional: Adjust padding for larger hover area */
-.highlight-wrapper {
-    display: inline-block;
-    padding: 0.5rem; /* Extra padding to make the hover area larger */
+    font-size: 2.5rem;
+    line-height: 2.5;
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 #Resume {
-    background: url('Media/pulse.gif') no-repeat center center fixed; /* Set GIF background */
-    background-size: cover; /* Ensure the background covers the entire section */
-    padding: 0; /* Remove padding around the section */
-    margin-top: 180px; /* Offset from the fixed header */
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    height: calc(100vh - 180px); /* Adjust height to fill the viewport minus the offset */
-    overflow: hidden; /* Hide any overflow content */
-    position: relative; /* Relative positioning for label */
+    background: url('Media/pulse.gif') no-repeat center center fixed;
+    background-size: cover;
+    padding: 0;
+    margin-top: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 180px);
+    overflow: hidden;
+    position: relative;
 }
 
 .Resume-content {
-    text-align: center; /* Center text within the Resume-content div */
+    text-align: center;
 }
 
 .Resume-content p {
-    font-size: 8rem; /* Increase the size of the paragraph text */
+    font-size: 8rem;
 }
 
 .resume-link {
-    display: inline-block; /* Allow padding and border to work */
-    padding: 15px 30px; /* Adjust padding for larger button */
-    font-size: 5rem; /* Increase the font size of the button text */
-    color: #000; /* Set text color */
-    background-color: #fff; /* Set background color to white */
-    border-radius: 50px; /* Make the button oval */
-    text-decoration: none; /* Remove underline from link */
-    font-weight: bold; /* Make the font bold */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for a 3D effect */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 5rem;
+    color: #000;
+    background-color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .resume-link:hover {
-    background-color: #f0f0f0; /* Change background on hover */
-    color: #333; /* Change text color on hover */
+    background-color: #f0f0f0;
+    color: #333;
 }
 
-/* styles.css */
 .social-icon.highlight {
-    background-color: yellow; /* Highlight color */
-    transition: background-color 0.5s ease; /* Smooth transition */
-    border-radius: 50%; /* Optional: adds rounded corners */
-    padding: 5px; /* Optional: adds padding for better visibility */
+    background-color: yellow;
+    transition: background-color 0.5s ease;
+    border-radius: 50%;
+    padding: 5px;
 }
 
-/* styles.css */
-.social-icon.highlight {
-    background-color: yellow; /* Highlight color */
-    transition: background-color 0.5s ease; /* Smooth transition */
-    border-radius: 50%; /* Optional: adds rounded corners */
-    padding: 5px; /* Optional: adds padding for better visibility */
-}
-
-/* Styles for contact message */
 #contact-message {
-    font-size: 2em; /* Adjust size as needed */
-    font-weight: bold; /* Make the text bold for emphasis */
-    color: rgb(255, 255, 0); /* Adjust color as needed */
-    margin-top: 10px; /* Space above the message */
-    padding: 10px; /* Space around the text */
-    display: inline; /* Ensure it is displayed inline with other content */
-    background-color: transparent; /* No background color */
-    border: none; /* No border */
-    box-shadow: none; /* No shadow */
-    text-align: center; /* Center-align the text */
+    font-size: 2em;
+    font-weight: bold;
+    color: rgb(255, 255, 0);
+    margin-top: 10px;
+    padding: 10px;
+    display: inline;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    text-align: center;
 }
+
 #Featured {
     background: url('Media/blueprint.jpg') no-repeat center center fixed;
     display: flex;
-    flex-direction: column; /* Stack children vertically */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -645,132 +534,128 @@ section {
 .Featured-content {
     max-width: 90%;
     margin: 0 auto;
-    padding: 20px 50px; /* Adjusted padding */
+    padding: 20px 50px;
 }
 
 .Featured-content h2 {
-    font-size: 10rem; /* Increased size */
-    margin-bottom: 2rem; /* Increased space below */
+    font-size: 10rem;
+    margin-bottom: 2rem;
     font-weight: 700;
-    color: white; /* Contrast color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .featured-list {
-    list-style-type: none; /* Remove default bullets */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the left */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .featured-list li {
-    position: relative; /* Position for custom bullet */
-    padding-left: 25px; /* Space for custom bullet */
-    margin-bottom: 1.5rem; /* Space between items */
-    font-size: 3rem; /* Increased size */
-    line-height: 1.5; /* Adjust line height for readability */
-    color: white; /* Contrast color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    line-height: 1.5;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 768px) {
     .Featured-content h2 {
-        font-size: 6rem; /* Responsive size */
+        font-size: 6rem;
     }
     
     .featured-list li {
-        font-size: 2rem; /* Responsive size */
+        font-size: 2rem;
     }
 }
 
-
-
 .other-content {
-    display: flex; /* Use flexbox to align items */
-    align-items: flex-start; /* Align items at the top of the section */
-    justify-content: space-between; /* Distribute space between items */
-    padding: 20px; /* Add padding around the content */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
 }
 
 .spotify-container {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center align children horizontally */
-    max-width: 350px; /* Limit maximum width */
-    margin-top: 50px
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    margin-top: 50px;
 }
 
 .spotify-playlist {
-    width: 100%; /* Ensure the widget takes up the full width of its container */
-    height: auto; /* Allow the height to adjust automatically */
-    margin-bottom: 20px; /* Space between the widget and the button */
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
 }
 
 .buy-me-a-coffee {
-    width: 100%; /* Match the width of the Spotify widget */
-    text-align: center; /* Center align the button */
-    position: relative; /* Position relative for the tooltip positioning */
-    display: inline-block; /* Ensure it only takes as much space as needed */
+    width: 100%;
+    text-align: center;
+    position: relative;
+    display: inline-block;
 }
 
 .buy-me-a-coffee img {
-    width: 100%; /* Make the image take up the full width of its container */
-    max-width: 300px; /* Match the width of the Spotify widget */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Rounded edges */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .buy-me-a-coffee::after {
-    content: 'Buy Me a Coffee 🙏'; /* Tooltip text */
+    content: 'Buy Me a Coffee 🙏';
     position: absolute;
-    bottom: 40%; /* Position tooltip above the image with margin-like spacing */
-    left: 50%; /* Center horizontally relative to the image */
-    transform: translateX(-50%); /* Center the tooltip horizontally */
-    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
-    color: #fff; /* White text color */
-    padding: 10px 15px; /* Padding around text */
-    border-radius: 5px; /* Rounded corners */
-    white-space: nowrap; /* Prevent text wrapping */
-    opacity: 0; /* Initially hidden */
-    visibility: hidden; /* Initially hidden */
-    transition: opacity 0.3s, visibility 0.3s; /* Smooth transition */
-    font-size: 20px; /* Adjust font size if needed */
-    text-align: center; /* Center text inside the tooltip */
-    width: max-content; /* Make tooltip width fit the content */
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    font-size: 20px;
+    text-align: center;
+    width: max-content;
+    box-sizing: border-box;
 }
 
 .buy-me-a-coffee:hover::after {
-    opacity: 1; /* Show tooltip */
-    visibility: visible; /* Make tooltip visible */
+    opacity: 1;
+    visibility: visible;
 }
 
-
 .google-form-container {
-    margin-left: auto; /* Pushes the container to the right */
-    width: 400px; /* Fixed width for the form container */
+    margin-left: auto;
+    width: 400px;
 }
 
 .google-form-container iframe {
-    width: 100%; /* Ensure iframe fills the container */
-    height: 700px; /* Adjust height as needed */
-    border: none; /* Remove default border */
-    border-radius: 10px; /* Match the border radius of other elements */
-    margin-top: 50px
+    width: 100%;
+    height: 700px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 50px;
 }
 
 #intro-text {
-    margin: 20px auto; /* Centers the paragraph horizontally, with space above and below */
-    max-width: 90%; /* Ensures the paragraph doesn’t stretch too wide */
-    word-wrap: break-word; /* Allows long words to break and wrap to the next line */
-    box-sizing: border-box; /* Ensures padding and border are included in the element’s width */
-    color: #fff; /* White text color for readability */
+    margin: 20px auto;
+    max-width: 90%;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    color: #fff;
     font-size: 16px;
     line-height: 1.5;
-    text-align: left; /* Center-justify the text if needed */
+    text-align: left;
     margin-right: 80px;
 }
-

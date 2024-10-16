@@ -34,9 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const typingSpeed = 75;
     const erasingSpeed = 50; 
     const pauseDuration = 1500; 
-
     const typingTextElement = document.querySelector('.typing-text span');
-
     if (typingTextElement) {
         let isTyping = true;
         let isErasing = false;
