@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function type() {
             if (isErasing) return; 
-
             if (currentCharIndex < texts[currentTextIndex].length) {
                 typingTextElement.textContent += texts[currentTextIndex].charAt(currentCharIndex);
                 currentCharIndex++;
