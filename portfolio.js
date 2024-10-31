@@ -13,21 +13,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const hireMeButton = document.getElementById('hire-me-btn');
     const contactMessage = document.getElementById('contact-message');
     const socialIcons = document.querySelectorAll('.social-icon');
-
+    
+    function isMobile() {
+        return window.innerWidth <= 768; // Adjust threshold as needed
+    }
+    
     if (hireMeButton && contactMessage && socialIcons.length) {
         hireMeButton.addEventListener('click', (event) => {
             event.preventDefault();
             contactMessage.textContent = 'Contact me!';
-            contactMessage.style.display = 'inline'; 
+    
+            if (isMobile()) {
+                contactMessage.style.display = 'block'; // Show message on mobile
+            } else {
+                contactMessage.style.display = 'inline'; // Show message inline on laptop
+            }
+    
             socialIcons.forEach(icon => icon.classList.add('highlight'));
             setTimeout(() => {
                 contactMessage.textContent = '';
-                contactMessage.style.display = 'none';
+                contactMessage.style.display = 'none'; // Hide message after timeout
                 socialIcons.forEach(icon => icon.classList.remove('highlight'));
             }, 5000);
         });
     }
-
+    
     const texts = ["Game Developer", "Frontend Designer", "Programmer", "Student"];
     let currentTextIndex = 0;
     let currentCharIndex = 0;
