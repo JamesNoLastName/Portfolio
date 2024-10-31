@@ -584,8 +584,8 @@ section {
 
 @media (max-width: 1000px) {
     #Projects {
-        background-size: contain; /* Adjust to contain on mobile */
-        background-position: center top; /* Adjust to show the top of the image */
+        background: url("Media/city.gif") no-repeat center center fixed;
+        background-size: cover; /* Adjust to contain on mobile */
     }
 
     .projects-container {
