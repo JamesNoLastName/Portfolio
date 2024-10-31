@@ -583,12 +583,19 @@ section {
 }
 
 @media (max-width: 1000px) {
-    #Projects {
+    #Projects::before {
+        content: ""; /* Use a pseudo-element to hold the background */
         background: url('Media/city.gif') no-repeat center center fixed;
-        background-size: cover; 
-        height: calc(100vh - 180px); 
-        overflow: hidden; 
+        background-size: cover; /* Cover the entire section */
+        position: absolute; /* Position it absolutely */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        filter: blur(0px); /* Apply any blur effects if needed */
+        z-index: 0; /* Set the z-index behind the content */
     }
+    
     .projects-container {
         display: flex; 
         overflow-x: auto; 
@@ -658,9 +665,6 @@ section {
 }
 
 @media (max-width: 1000px) {
-    .Resume{
-
-    }
     .Resume-content p {
         font-size: 5rem; 
     }
