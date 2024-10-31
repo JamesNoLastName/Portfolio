@@ -111,6 +111,7 @@ section {
     text-align: left;
 }
 
+
 .home-content {
     max-width: 600px; 
 }
@@ -461,8 +462,8 @@ section {
 }
 
 @media (max-width: 1000px) {
-    .about-me:before{
-        background-size: contain;
+    #about-me::before {
+        background-size: 100% auto;
     }
     .about-me-content h2 {
         font-size: 10vw; 
