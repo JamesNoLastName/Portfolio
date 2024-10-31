@@ -487,7 +487,7 @@ section {
 
 #Projects {
     background: url('Media/city.gif') no-repeat center center fixed;
-    background-size: cover;
+    background-size: cover; /* For larger screens */
     padding: 0;
     margin-top: 0px;
     display: flex;
@@ -583,19 +583,11 @@ section {
 }
 
 @media (max-width: 1000px) {
-    #Projects::before {
-        content: ""; /* Use a pseudo-element to hold the background */
-        background: url('Media/city.gif') no-repeat center center fixed;
-        background-size: cover; /* Cover the entire section */
-        position: absolute; /* Position it absolutely */
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        filter: blur(0px); /* Apply any blur effects if needed */
-        z-index: 0; /* Set the z-index behind the content */
+    #Projects {
+        background-size: contain; /* Adjust to contain on mobile */
+        background-position: center top; /* Adjust to show the top of the image */
     }
-    
+
     .projects-container {
         display: flex; 
         overflow-x: auto; 
@@ -633,7 +625,7 @@ section {
         font-size: 3rem; 
         margin-bottom: 1rem; 
         text-align: center; 
-        margin-top:40px;
+        margin-top: 40px;
     }
 
     .project-item .project-text {
@@ -642,6 +634,7 @@ section {
         text-align: center; 
     }
 }
+
 
 #Resume {
     background: url('Media/pulse.gif') no-repeat center center fixed;
