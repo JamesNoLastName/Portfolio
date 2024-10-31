@@ -581,11 +581,13 @@ section {
 .project-item:hover .project-text {
     opacity: 1;
 }
+
 @media (max-width: 1000px) {
     #Projects {
-        background-size: cover; 
+        background-size: 100% 100%; 
         background-position: center; 
         background-attachment: fixed; 
+        height: calc(100vh - 180px); 
     }
     .projects-container {
         display: flex; 
@@ -657,7 +659,7 @@ section {
 
 @media (max-width: 1000px) {
     .Resume{
-        
+
     }
     .Resume-content p {
         font-size: 5rem; 
