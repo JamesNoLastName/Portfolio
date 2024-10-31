@@ -582,6 +582,11 @@ section {
     opacity: 1;
 }
 @media (max-width: 1000px) {
+    #Projects {
+        background-size: cover; 
+        background-position: center; 
+        background-attachment: fixed; 
+    }
     .projects-container {
         display: flex; 
         overflow-x: auto; 
@@ -651,6 +656,9 @@ section {
 }
 
 @media (max-width: 1000px) {
+    .Resume{
+        
+    }
     .Resume-content p {
         font-size: 5rem; 
     }
