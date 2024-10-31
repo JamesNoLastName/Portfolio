@@ -461,6 +461,9 @@ section {
 }
 
 @media (max-width: 1000px) {
+    .about-me:before{
+        background-size: contain;
+    }
     .about-me-content h2 {
         font-size: 10vw; 
         margin-bottom: 1rem; 
@@ -571,6 +574,9 @@ section {
     opacity: 1;
 }
 @media (max-width: 1000px) {
+    .Projects{
+        background-size: contain;
+    }
     .projects-container {
         display: flex; 
         overflow-x: auto; 
@@ -640,6 +646,9 @@ section {
 }
 
 @media (max-width: 1000px) {
+    .Resume{
+        background-size: contain;
+    }
     .Resume-content p {
         font-size: 5rem; 
     }
