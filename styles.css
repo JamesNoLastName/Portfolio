@@ -834,3 +834,28 @@ section {
         height: 70vh; 
     }
 }
+
+@media (max-width: 1000px) {
+    #About-Me {
+        background-size: contain; 
+        background-attachment: scroll; 
+        background-position: center;
+    }
+    #Featured {
+        background-size: contain; 
+        background-attachment: scroll; 
+        background-position: center;
+    }
+
+    #Resume {
+        background-size: contain; 
+        background-attachment: scroll; 
+        background-position: center;
+    }
+
+    #Projects {
+        background-size: contain; 
+        background-attachment: scroll; 
+        background-position: center;
+    }
+}
