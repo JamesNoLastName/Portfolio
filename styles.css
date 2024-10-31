@@ -584,10 +584,10 @@ section {
 
 @media (max-width: 1000px) {
     #Projects {
-        background-size: 100% 100%; 
-        background-position: center; 
-        background-attachment: fixed; 
+        background: url('Media/city.gif') no-repeat center center fixed;
+        background-size: cover; 
         height: calc(100vh - 180px); 
+        overflow: hidden; 
     }
     .projects-container {
         display: flex; 
