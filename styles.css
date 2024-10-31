@@ -721,9 +721,9 @@ section {
 }
 
 @media (max-width: 1000px) {
-    .Featured-content {
-        text-align: center; 
-        padding: 0 1rem; 
+    #Featured {
+        background-size: contain; 
+        background-position: top;
     }
     
     .Featured-content h2 {
@@ -731,15 +731,6 @@ section {
         margin: 0; 
     }
     
-    .featured-list {
-        list-style-type: none; 
-        padding: 0; 
-        display: flex; 
-        flex-direction: column; 
-        align-items: center; 
-        margin: 0; 
-    }
-
     .featured-list li {
         font-size: 1.5rem; 
         margin: 0.5rem 0; 
