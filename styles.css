@@ -304,7 +304,7 @@ span {
     padding: 5px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .home {
         flex-direction: column; 
         justify-content: center; 
@@ -460,7 +460,7 @@ section {
     max-width: 100%; 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .about-me-content h2 {
         font-size: 10vw; 
         margin-bottom: 1rem; 
@@ -570,7 +570,7 @@ section {
 .project-item:hover .project-text {
     opacity: 1;
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .projects-container {
         display: flex; 
         overflow-x: auto; 
@@ -639,7 +639,7 @@ section {
     font-size: 10rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .Resume-content p {
         font-size: 5rem; 
     }
@@ -710,7 +710,7 @@ section {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .Featured-content {
         text-align: center; 
         padding: 0 1rem; 
@@ -811,7 +811,7 @@ section {
     margin-top: 50px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .spotify-container {
         display: none; 
     }
