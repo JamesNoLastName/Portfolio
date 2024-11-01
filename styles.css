@@ -597,7 +597,7 @@ section {
 @media (max-width: 1000px) {
     #Projects::before {
         content: "";
-        background: url('Media/citymobile.gif') no-repeat center center;
+        background: url('Media/city.gif') no-repeat center center;
         background-size: cover; 
         position: absolute;
         top: 0;
