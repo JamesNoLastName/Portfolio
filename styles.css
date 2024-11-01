@@ -682,7 +682,7 @@ section {
 
 @media (max-width: 1000px) {
     #Resume::before {
-        background: url('Media/pulse.gif') no-repeat center center;
+        background: url('Media/pulsemobile.gif') no-repeat center center;
         background-size: cover;
     }
 
@@ -786,7 +786,6 @@ section {
         text-align: center; 
     }
 }
-
 
 .other-content {
     display: flex;
