@@ -499,7 +499,7 @@ section {
 
 #Projects::before {
     content: "";
-    background: url('Media/city.gif') no-repeat center center;
+    background: url('Media/city.gif') no-repeat center center fixed;
     background-size: cover;
     position: absolute;
     top: 0;
@@ -595,6 +595,12 @@ section {
 }
 
 @media (max-width: 1000px) {
+    .projects {
+        background-image: url('Media/city.gif');
+        background-size: cover; /* or cover */
+        background-position: center; /* centers the image */
+        background-repeat: no-repeat; /* prevents tiling */
+    }
     #Projects::before {
         content: "";
         background: url('Media/city.gif') no-repeat center center fixed;
@@ -654,6 +660,7 @@ section {
         text-align: center; 
     }
 }
+
 #Resume {
     position: relative;
     display: flex;
