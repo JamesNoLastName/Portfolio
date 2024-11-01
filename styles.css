@@ -597,7 +597,7 @@ section {
 @media (max-width: 1000px) {
     #Projects::before {
         content: "";
-        background: url('Media/city.gif') no-repeat center center;
+        background: url('Media/city.gif') no-repeat center center fixed;
         background-size: cover; 
         position: absolute;
         top: 0;
@@ -654,22 +654,34 @@ section {
         text-align: center; 
     }
 }
-
 #Resume {
-    background: url('Media/pulse.gif') no-repeat center center fixed;
-    background-size: cover;
-    padding: 0;
-    margin-top: 0px;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     height: calc(100vh - 180px);
     overflow: hidden;
-    position: relative;
+    padding: 0;
+    margin-top: 0px;
+}
+
+#Resume::before {
+    content: "";
+    background: url('Media/pulse.gif') no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(0px); 
+    z-index: 0;
 }
 
 .Resume-content {
+    position: relative;
     text-align: center;
+    z-index: 1;
 }
 
 .Resume-content p {
@@ -677,8 +689,13 @@ section {
 }
 
 @media (max-width: 1000px) {
+    #Resume::before {
+        background: url('Media/pulse.gif') no-repeat center center;
+        background-size: cover;
+    }
+
     .Resume-content p {
-        font-size: 5rem; 
+        font-size: 5rem;
     }
 }
 
