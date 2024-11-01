@@ -484,7 +484,6 @@ section {
     }
 }
 
-
 #Projects {
     background: url('Media/city.gif') no-repeat center center fixed;
     background-size: cover; /* For larger screens */
@@ -496,6 +495,19 @@ section {
     height: calc(100vh - 180px);
     overflow: hidden;
     position: relative;
+}
+
+#Projects::before {
+    content: "";
+    background: url('Media/city.gif') no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(0px); 
+    z-index: 0;
 }
 
 .projects-label {
@@ -583,9 +595,17 @@ section {
 }
 
 @media (max-width: 1000px) {
-    #Projects {
-        background: url("Media/city.gif") no-repeat center center fixed;
-        background-size: cover; /* Adjust to contain on mobile */
+    #Projects::before {
+        content: "";
+        background: url('Media/citymobile.gif') no-repeat center center;
+        background-size: cover; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        filter: blur(0px); 
+        z-index: 0;
     }
 
     .projects-container {
@@ -634,7 +654,6 @@ section {
         text-align: center; 
     }
 }
-
 
 #Resume {
     background: url('Media/pulse.gif') no-repeat center center fixed;
