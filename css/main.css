@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+    --main-color: #7d12ff;
+    --hover-color: #7d12ff;
+    --bg-color: black;
+    --text-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    overflow-y: auto !important;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background-color: #000;
+    padding: 1rem;
+    color: #fff;
+    margin: 0;
+    border-bottom: 2px solid #000000;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #7d12ff;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+@media(max-width:1000px) {
+    nav {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #7d12ff;
+        border-bottom: 3px solid #7d12ff;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #7d12ff;
+    }
+}
+
+span {
+    color: #7d12ff;
+}
+
+#About-me, #Resume, #Featured, #Other {
+    background-color: rgb(0, 0, 0);
+}
+
+nav {
+    background-color: #000000;
+    padding: 0.5rem 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    margin-right: 1rem;
+    margin-left: 4rem;
+    padding: 0.5rem;
+    font-size: 1.8rem;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    font-weight: 500;
+
+}
+
+nav a:hover,
+nav a.active {
+    color: #7d12ff;
+    border-bottom: 3px solid #7d12ff;
+}
+
+section {
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    margin: 0;
+}
