@@ -1,0 +1,96 @@
+.other-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.spotify-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    margin-top: 50px;
+}
+
+.spotify-playlist {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.buy-me-a-coffee {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.buy-me-a-coffee img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.buy-me-a-coffee::after {
+    content: 'Buy Me a Coffee 🙏';
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    font-size: 20px;
+    text-align: center;
+    width: max-content;
+    box-sizing: border-box;
+}
+
+.buy-me-a-coffee:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.google-form-container {
+    margin-left: auto;
+    width: 400px;
+}
+
+.google-form-container iframe {
+    width: 100%;
+    height: 700px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+@media (max-width: 1000px) {
+    .spotify-container {
+        display: none; 
+    }
+
+    .buy-me-a-coffee {
+        display: none; 
+    }
+
+    .google-form-container {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        width: 100%; 
+        margin: 0 auto; 
+    }
+
+    iframe {
+        width: 90vw; 
+        height: 70vh; 
+    }
+}
