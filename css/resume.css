@@ -12,7 +12,7 @@
 
 #Resume::before {
     content: "";
-    background: url('../Media/pulse.gif') no-repeat center center;
+    background: url('../Media/pulse.gif') no-repeat center center fixed;
     background-size: cover;
     position: absolute;
     top: 0;
