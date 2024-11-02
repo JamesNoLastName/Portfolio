@@ -1,0 +1,162 @@
+#Projects {
+    background: url('../Media/city.gif') no-repeat center center fixed;
+    background-size: cover; /* For larger screens */
+    padding: 0;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 180px);
+    overflow: hidden;
+    position: relative;
+}
+
+#Projects::before {
+    content: "";
+    background: url('../Media/city.gif') no-repeat center center fixed;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(0px); 
+    z-index: 0;
+}
+
+.projects-label {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 
+        1px 1px 0 #000,
+       -1px 1px 0 #000,
+        1px -1px 0 #000,
+       -1px -1px 0 #000;
+    z-index: 3;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, minmax(200px, 1fr));
+    column-gap: 15rem;
+    row-gap: 2rem;
+    width: 90%;
+    height: 80%;
+    max-width: 1200px;
+    max-height: 800px;
+    margin-top: 80px;
+    margin-right: 60px;
+    position: relative;
+}
+
+.project-item {
+    position: relative;
+    background-color: #444444;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 8px solid hwb(53 8% 14%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 120%; 
+    height: 90%; 
+}
+
+.project-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: filter 0.3s ease;
+}
+
+.project-item:hover img {
+    filter: blur(4px);
+}
+
+.project-item .project-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: inline-block;
+    max-width: 500px;
+}
+
+.project-item:hover .project-text {
+    opacity: 1;
+}
+
+
+@media (max-width: 1000px) {
+    #Projects::before {
+        background: url('../Media/city.gif') no-repeat center center;
+        background-size: cover; /* Maintain consistency */
+    }
+    .projects-container {
+        display: flex; 
+        overflow-x: auto; 
+        overflow-y: hidden; 
+        padding: 0 10px; 
+        gap: 1rem; 
+        scroll-snap-type: x mandatory; 
+        justify-content: flex-start; 
+        align-items: center; 
+        width: calc(100vw - 20px); 
+        margin: 0; 
+    }
+
+    .project-item {
+        flex: 0 0 auto; 
+        width: 120%; 
+        height: 90%; 
+        max-width: 400px; 
+        max-height: 300px; 
+        border-radius: 8px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        scroll-snap-align: start; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        margin: 10px; 
+    }
+
+    .project-item:first-child {
+        margin-left: 10px; 
+    }
+
+    .projects-label {
+        font-size: 3rem; 
+        margin-bottom: 1rem; 
+        text-align: center; 
+        margin-top: 40px;
+    }
+
+    .project-item .project-text {
+        font-size: 1.2rem; 
+        padding: 0.25rem; 
+        text-align: center; 
+    }
+}
