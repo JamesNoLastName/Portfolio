@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const socialIcons = document.querySelectorAll('.social-icon');
     
     function isMobile() {
-        return window.innerWidth <= 768; // Adjust threshold as needed
+        return window.innerWidth <= 768;
     }
     
     if (hireMeButton && contactMessage && socialIcons.length) {
@@ -24,15 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
             contactMessage.textContent = 'Contact me!';
     
             if (isMobile()) {
-                contactMessage.style.display = 'block'; // Show message on mobile
+                contactMessage.style.display = 'block'; 
             } else {
-                contactMessage.style.display = 'inline'; // Show message inline on laptop
+                contactMessage.style.display = 'inline';
             }
     
             socialIcons.forEach(icon => icon.classList.add('highlight'));
             setTimeout(() => {
                 contactMessage.textContent = '';
-                contactMessage.style.display = 'none'; // Hide message after timeout
+                contactMessage.style.display = 'none'; 
                 socialIcons.forEach(icon => icon.classList.remove('highlight'));
             }, 5000);
         });
