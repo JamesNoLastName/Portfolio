@@ -54,6 +54,7 @@ header {
 }
 
 .logo:hover {
+    color: rgb(255, 255, 0);
     transform: scale(1.1);
 }
 
