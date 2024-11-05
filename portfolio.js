@@ -117,23 +117,4 @@ document.addEventListener('DOMContentLoaded', () => {
             homeImg.removeAttribute('data-hover');
         });
     }
-    const highlights = document.querySelectorAll('.highlight');
-    const aboutMeSection = document.querySelector('#about-me');
-
-    if (highlights.length && aboutMeSection) {
-        let currentImageUrl = '';
-
-        highlights.forEach(span => {
-            span.addEventListener('mouseover', () => {
-                const imageUrl = span.getAttribute('data-image');
-                if (imageUrl !== currentImageUrl) {
-                    aboutMeSection.style.backgroundImage = `url(${imageUrl})`;
-                    currentImageUrl = imageUrl; 
-                }
-            });
-        });
-        aboutMeSection.addEventListener('mouseleave', () => {
-            currentImageUrl = ''; 
-        });
-    }
 });
