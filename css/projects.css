@@ -100,19 +100,29 @@
     z-index: 2;
     opacity: 0;
     transition: opacity 0.3s ease;
-    display: inline-block;
-    max-width: 500px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    text-align: center;
+}
+
+.project-item .project-text h3 {
+    font-weight: bold; 
+    text-decoration: underline; 
+    margin-bottom: 1rem; 
+    margin-top: 5vh;
 }
 
 .project-item:hover .project-text {
     opacity: 1;
 }
 
-
 @media (max-width: 1000px) {
     #Projects::before {
         background: url('../Media/city.gif') no-repeat center center;
-        background-size: cover; /* Maintain consistency */
+        background-size: cover; 
     }
     .projects-container {
         display: flex; 
