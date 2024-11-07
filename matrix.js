@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const ctx = canvas.getContext("2d");
 
     const settings = {
-        speed: 6,
-        columns: 50,
-        fontSize: 14,
+        speed: 7,
+        columns: 20,
+        fontSize: 20,
         color: "#7d12ff",
         charType: "english",
         rainbow: false,
-        yellowProbability: 0.33
+        yellowProbability: 0.10
     };
 
     let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
