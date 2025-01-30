@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    const texts = ["Game Developer", "Frontend Designer", "Programmer", "Student"];
+    const texts = ["Web Developer", "Frontend Designer", "Programmer", "Student"];
     let currentTextIndex = 0;
     let currentCharIndex = 0;
     const typingSpeed = 75;
